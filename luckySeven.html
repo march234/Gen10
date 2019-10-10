@@ -34,7 +34,7 @@
 				
 				//Check if input is a string.
 				else if(isNaN(input)) {
-					alert("Starting bet must be a number.");
+					alert("Starting bet must be a number. If there is a dollar sign remove it.");
 				}
 				
 				//Pass error checks.
@@ -63,13 +63,13 @@
 					document.getElementById("subButton").innerHTML = "Play Again";
 					document.getElementById("results").innerHTML = "";
 					var temp = "<hr><h1>Results</h1>";
-					temp += "<table><tr><td>Starting Bet</td><td>";
+					temp += '<table><tr class = "odd"><td>Starting Bet</td><td>$';
 					temp += starting;
-					temp += "</td></tr><tr><td>Total Rolls Before Going Broke</td><td>";
+					temp += '</td></tr><tr class = "even"><td>Total Rolls Before Going Broke</td><td>';
 					temp += rolls;
-					temp += "</td></tr><tr><td>Highest Amount Won</td><td>";
+					temp += '</td></tr><tr class = "odd"><td>Highest Amount Won</td><td>$';
 					temp += highest;
-					temp += "</td></tr><tr><td>Roll Count at Highest Amount Won</td><td>";
+					temp += '</td></tr><tr class = "even"><td>Roll Count at Highest Amount Won</td><td>';
 					temp +=	rollsHighest;
 					temp += "</td></tr></table>";
 					document.getElementById("results").innerHTML = temp;

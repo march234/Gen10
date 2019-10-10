@@ -1,3 +1,5 @@
+/* Brody Marchiniak */
+
 html{
 	background-color: lightgray;
 	text-align: center;
@@ -18,4 +20,12 @@ table {
 td {
 	border-right: 1px solid black;
 	padding: 5px;
+}
+
+.even {
+	background-color: lightsteelblue;
+}
+
+.odd {
+	background-color: lightslategray;
 }
