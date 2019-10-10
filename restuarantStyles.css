@@ -47,3 +47,10 @@ a:active {
 .back {
 	background-color: peachpuff;
 }
+
+.gray {
+	background-color: lightgray;
+	height: 200px;
+	overflow: auto;
+	margin: 0 auto;
+}
