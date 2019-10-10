@@ -1,0 +1,190 @@
+<!-- Brody Marchiniak -->
+
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link rel="stylesheet" type = "text/css" href = "restuarantStyles.css">
+		
+		<title>Contact Us</title>
+		
+		<style>
+			.formstyle {
+				font-weight: bold;
+			}
+		</style>
+		
+		<script>
+			(function() {
+				'use strict';
+				window.addEventListener('load', function() {
+					var forms = document.getElementsByClassName('needs-validation');
+					var validation = Array.prototype.filter.call(forms, function(form) {
+						form.addEventListener('submit', function(event) {
+							if (form.checkValidity() === false) {
+								event.preventDefault();
+								event.stopPropagation();
+							}
+							form.classList.add('was-validated');
+						}, false);
+					});
+				}, false);
+			})();
+			
+/*			function Validate() {
+				var days = document.getElementsByName("days");
+				var numday = 0;
+				for (var i = 0; i < days.length; i++){
+					if(days[i].checked)
+						numday++;
+				}
+				if (numday == 0)
+					alert("Please select days we can contact you.");
+			}*/
+		</script>
+	</head>
+	<body>
+		<div class = "jumbotron text-center">
+			<h2>We are opening a new location! Come check it out October 20th.<br> 1200 Victor Avenue Minneapolis, MN 55403.</h2>
+		</div>
+		
+		<!-- JavaScript warning -->
+		<noscript>
+			Your browser does not support JavaScript or you have JavaScript disabled. To best use and see this site, please enable JavaScript.
+		</noscript>
+		
+		<header>
+			<h1>Toby's Bar and Grill</h1>
+			<hr>
+		</header>
+		
+		<nav>
+			&emsp;
+			<a class = "btn badge-pill" href = "homepage3.html"><img src="open-iconic/svg/home.svg" alt = "Home" height = "20" width = "20"></a> &emsp;
+			<a class = "btn badge-pill" href = "menu3.html">Menu</a> &emsp;
+			<a class = "btn badge-pill" href = "contactUs3.html">Contact Us</a>
+		</nav>
+		
+		<!-- div for background color -->
+		<div class = "back">
+			<hr>
+			
+			<form class = "formstyle needs-validation" name = "contact" novalidate>
+				
+				<!-- Name -->
+				<div class = "form-group row">
+					<label for = "name" class = "col-lg-5 col-form-label text-lg-right text-center">Name: </label>
+					<div class = "col-lg-2">
+						<input class = "form-control" type = "text" id = "name" name = "name" required>
+						<div class = "invalid-feedback">Please enter your name.</div>
+					</div>
+				</div>
+				
+				<!-- Email -->
+				<div class = "form-group row">
+					<label for = "email" class = "col-lg-5 col-form-label text-lg-right text-center">Email: </label>
+					<div class = "col-lg-2">
+						<input class = "form-control" type = "email" id = "email" name = "email" required>
+						<div class = "invalid-feedback">Please enter your email.</div>
+					</div>
+				</div>
+				
+				<!-- Phone Number -->
+				<div class = "form-group row">
+					<label for = "phone" class = "col-lg-5 col-form-label text-lg-right text-center">Phone: </label>
+					<div class = "col-lg-2">
+						<input class = "form-control" type = "tel" id = "phone" name = "phone" required>
+						<div class = "invalid-feedback">Please enter your Phone Number.</div>
+					</div>
+				</div>
+				
+				<!-- Reason for Inquiry -->
+				<div class = "form-group row">
+					<label for = "reason" class = "col-lg-5 col-form-label text-lg-right text-center">Reason for Inquiry: </label>
+					<div class = "col-lg-2">
+						<select class = "form-control" id = "reason" name = "reason">
+							<option value = "catering">Catering</option>
+							<option value = "privateParty">Private Party</option>
+							<option value = "feedback">Feedback</option>
+							<option value = "other">Other</option>
+						</select>
+					</div>
+				</div>
+				
+				<!-- Additional Information -->
+				<div class = "form-group row">
+					<label for = "addinfo" class = "col-lg-5 col-form-label text-lg-right text-center">Additional Information: </label>
+					<div class = "col-lg-2">
+						<textarea class = "form-control" id = "addinfo" name = "addinfo" rows = "4"></textarea>
+					</div>
+				</div>
+				
+				
+				<!-- Been to the Restaurant Before -->
+				<div class = "form-group row">
+					<div class = "col-lg-5 text-lg-right text-center">Have you been to the restuarant before? </div>
+					<div class = "col-lg-3">
+						<div class = "form-check form-check-inline">
+							<input class = "form-check-input" type = "radio" id = "choice1" name = "beenBefore" value = "no" required>
+							<label class = "form-check-label" for = "choice1">No</label>
+							
+						</div>
+						<div class = "form-check form-check-inline">
+							<input class = "form-check-input" type = "radio" id = "choice2" name = "beenBefore" value = "yes">
+							<label class = "form-check-label" for = "choice2">Yes</label>
+							<div class = "invalid-feedback">&emsp; Please select Yes or No.</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Days to Contact -->
+				<div class = "form-group row">
+					<div class = "col-lg-5 text-lg-right text-center">Best days to contact you? </div>
+					<div class = "col-lg-3">
+						<div class = "form-check form-check-inline">
+							<input class = "form-check-input" type = "checkbox" id = "monday" name = "days" value = "monday">
+							<label class = "form-check-label" for = "monday">M</label>
+						</div>
+						<div class = "form-check form-check-inline">
+							<input class = "form-check-input" type = "checkbox" id = "tuesday" name = "days" value = "tuesday">
+							<label class = "form-check-label" for = "tuesday">T</label>
+						</div>
+						<div class = "form-check form-check-inline">
+							<input class = "form-check-input" type = "checkbox" id = "wednesday" name = "days" value = "wednesday">
+							<label class = "form-check-label" for = "wednesday">W</label>
+						</div>
+						<div class = "form-check form-check-inline">
+							<input class = "form-check-input" type = "checkbox" id = "thursday" name = "days" value = "thursday">
+							<label class = "form-check-label" for = "thursday">Th</label>
+						</div>
+						<div class = "form-check form-check-inline">
+							<input class = "form-check-input" type = "checkbox" id = "friday" name = "days" value = "friday">
+							<label class = "form-check-label" for = "friday">F</label>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Submit Button -->
+				<div class = "form-group row">
+					<div class = "col text-center">
+						<button class = "btn btn-primary" type = "submit" name = "submit">Send Request</button>
+					</div>
+				</div>
+			</form>
+			
+			<hr>
+		</div>
+		
+		<footer>
+			<p>4605 Gregory Street, Minneapolis, Minnesota, 55403</p>
+			<p>763-218-3509</p>
+		</footer>
+		
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	</body>
+</html>

@@ -1,0 +1,49 @@
+/*Brody Marchiniak*/
+
+html {
+	text-align: center;
+}
+
+header {
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+}
+
+footer {
+	text-align:center;
+}
+
+nav {
+	text-align: left;
+}
+
+nav .btn {
+	background-color: peachpuff;
+}
+
+a:link {
+	color: black;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: red;
+}
+
+a:hover {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+a:active {
+	text-decoration: none;
+}
+
+.main {
+	width: 400px;
+	margin: 0 auto;
+}
+
+.back {
+	background-color: peachpuff;
+}

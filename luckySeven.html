@@ -1,0 +1,93 @@
+<!-- Brody Marchiniak -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type = "text/css" href = "luckystyle.css">
+		<title>Lucky Seven</title>
+		
+		<script>
+			function rollDice() {
+				return Math.floor(Math.random() * 6) + 1;
+			}
+			
+			function Submission() {
+				var input = document.getElementById("startBet").value;
+				var current = 0;
+				var rolls = 0;
+				var highest = 0;
+				var rollsHighest = 0;
+				var dice = 0;
+				// Prevents input from being treated as a string in loop.
+				var starting = parseFloat(input);
+				
+				//Check if Empty.
+				if (input == "") {
+					alert("Starting bet is empty.");
+				}
+				
+				//Check if less than or equal to 0.
+				else if (input <= 0){
+					alert("Starting bet must be greater than $0.");
+				}
+				
+				//Check if input is a string.
+				else if(isNaN(input)) {
+					alert("Starting bet must be a number.");
+				}
+				
+				//Pass error checks.
+				else {
+					current = starting;
+					highest = starting;
+					while (current > 0) {
+						rolls++;
+						dice = rollDice() + rollDice();
+						
+						//Add or subtract based on dice roll.
+						if (dice == 7) {
+							current = current + 4.0;
+						}
+						else {
+							current = current - 1.0;
+						}
+						
+						//Set highest values.
+						if (current > highest){
+							highest = current;
+							rollsHighest = rolls;
+						}
+					}
+					//Create table.
+					document.getElementById("subButton").innerHTML = "Play Again";
+					document.getElementById("results").innerHTML = "";
+					var temp = "<hr><h1>Results</h1>";
+					temp += "<table><tr><td>Starting Bet</td><td>";
+					temp += starting;
+					temp += "</td></tr><tr><td>Total Rolls Before Going Broke</td><td>";
+					temp += rolls;
+					temp += "</td></tr><tr><td>Highest Amount Won</td><td>";
+					temp += highest;
+					temp += "</td></tr><tr><td>Roll Count at Highest Amount Won</td><td>";
+					temp +=	rollsHighest;
+					temp += "</td></tr></table>";
+					document.getElementById("results").innerHTML = temp;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Lucky Seven</h1>
+		
+			<p>
+				Starting Bet: <input  type = "text" name = "startBet" id = "startBet" size = "5" placeholder = "$0.00" />
+			</p>
+			<p>
+				<button type = "button" name = "subButton" id = "subButton" value = "Play" onclick = "Submission()">Play</button>
+			</p>
+		
+		<div id = "results">
+		</div>
+	</body>
+</html>
